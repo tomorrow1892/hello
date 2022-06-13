@@ -11,8 +11,15 @@ public class Kazuate {
     public void showMenu(){
         int suzi;
         for(int count=0;count < 5;count++){
-            System.out.print("数字を入力してください(0~99):");
+            
+            System.out.println("\n"+(count+1) + "回目");
+            System.out.print("数字を入力してください(10~99):");
             suzi = KeyBoard.inputNumber();
+            while(suzi < 10 || suzi >99){
+                System.out.print("受け付けられない数字です．10~99の数字を入力してください:");
+                suzi = KeyBoard.inputNumber();
+            }
+
             if(Math.abs(suzi - collectSuzi) == 0){
                 System.out.println("正解!");
                 return;
