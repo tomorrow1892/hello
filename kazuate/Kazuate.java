@@ -21,15 +21,20 @@ public class Kazuate {
             }
 
             if(Math.abs(suzi - collectSuzi) == 0){
-                System.out.println("正解!");
+                System.out.println("当たり!");
                 return;
             }
-            if(Math.abs(suzi - collectSuzi) > 20){
+            else if(suzi - collectSuzi > 0){
+                System.out.println("正解より大きいです．");
+            }
+            else {
+                System.out.println("正解より小さいです．");
+            }
+            
+            if(Math.abs(suzi - collectSuzi) >= 20){
                 System.out.println("20以上の差があります．");
             }
-            else if(Math.abs(suzi - collectSuzi) <= 20){
-                System.out.println("20以内に正解があります．");
-            }
+            
         }
 
         System.out.println("終了!正解は"+ collectSuzi+"です．");
